@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+/* Any custom component class goes here 
+https://tailwindcss.com/docs/extracting-components#extracting-css-components-with-apply 
+*/
+
+@tailwind utilities;
+/* Any custom utility class goes here 
+https://tailwindcss.com/docs/adding-new-utilities
+*/

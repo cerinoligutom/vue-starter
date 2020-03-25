@@ -1,0 +1,3 @@
+**/*.d.[jt]s
+*.d.ts
+/src/generated/

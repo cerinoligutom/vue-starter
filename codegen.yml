@@ -1,0 +1,16 @@
+overwrite: true
+watch: true
+schema: http://localhost:8080/graphql
+documents: src/**/*.graphql
+generates:
+  ./src/generated/graphql.ts:
+    config:
+      namingConvention:
+        enumValues: constant-case#constantCase
+      withCompositionFunctions: false
+      maybeValue: T | null | undefined
+
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-vue-apollo

@@ -1,0 +1,71 @@
+{
+	"name": "vue-starter",
+	"version": "0.1.0",
+	"private": true,
+	"author": {
+		"email": "zeferinix@gmail.com",
+		"name": "Cerino O. Ligutom III",
+		"url": "https://www.zeferinix.com"
+	},
+	"scripts": {
+		"start": "concurrently -n \"vue,codegen\" -c \"bgGreen.bold,bgMagenta.bold\" \"npm:serve\" \"npm:watch:graphql-codegen\" ",
+		"serve": "vue-cli-service serve --port=8081",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint",
+		"watch:graphql-codegen": "graphql-codegen --watch"
+	},
+	"dependencies": {
+		"apollo-cache-inmemory": "^1.6.5",
+		"apollo-client": "^2.6.8",
+		"apollo-link": "^1.2.13",
+		"apollo-link-http": "^1.5.16",
+		"core-js": "^3.6.4",
+		"direct-vuex": "^0.10.4",
+		"graphql": "^14.6.0",
+		"graphql-tag": "^2.10.3",
+		"lodash": "^4.17.15",
+		"tailwindcss": "^1.2.0",
+		"vue": "^2.6.11",
+		"vue-router": "^3.1.5",
+		"vuex": "^3.1.2"
+	},
+	"devDependencies": {
+		"@fullhuman/postcss-purgecss": "^2.1.0",
+		"@graphql-codegen/cli": "^1.13.1",
+		"@graphql-codegen/typescript": "^1.13.1",
+		"@graphql-codegen/typescript-operations": "^1.13.1",
+		"@graphql-codegen/typescript-vue-apollo": "^1.13.1",
+		"@types/lodash": "^4.14.149",
+		"@typescript-eslint/eslint-plugin": "^2.18.0",
+		"@typescript-eslint/parser": "^2.18.0",
+		"@vue/cli-plugin-babel": "~4.2.0",
+		"@vue/cli-plugin-eslint": "~4.2.0",
+		"@vue/cli-plugin-router": "~4.2.0",
+		"@vue/cli-plugin-typescript": "~4.2.0",
+		"@vue/cli-plugin-vuex": "~4.2.0",
+		"@vue/cli-service": "~4.2.0",
+		"@vue/eslint-config-prettier": "^6.0.0",
+		"@vue/eslint-config-typescript": "^5.0.1",
+		"concurrently": "^5.1.0",
+		"eslint": "^6.7.2",
+		"eslint-plugin-prettier": "^3.1.1",
+		"eslint-plugin-vue": "^6.1.2",
+		"lint-staged": "^9.5.0",
+		"node-sass": "^4.12.0",
+		"postcss-custom-properties": "^9.1.1",
+		"postcss-import": "^12.0.1",
+		"prettier": "^1.19.1",
+		"sass-loader": "^8.0.2",
+		"typescript": "~3.7.5",
+		"vue-template-compiler": "^2.6.11"
+	},
+	"gitHooks": {
+		"pre-commit": "lint-staged"
+	},
+	"lint-staged": {
+		"*.{js,jsx,vue,ts,tsx}": [
+			"vue-cli-service lint",
+			"git add"
+		]
+	}
+}

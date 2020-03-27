@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { moduleActionContext, moduleGetterContext } from '../index';
 export const getContexts = <T>(module: T) => {
 	const getterContext = (args: [any, any, any, any]) => moduleGetterContext(args, module);

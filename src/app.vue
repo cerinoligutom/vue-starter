@@ -32,4 +32,6 @@
 		}
 	}
 }
+
+@import 'nprogress/nprogress.css';
 </style>

@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 // https://webpack.js.org/guides/dependency-management/#require-context
 const requireComponent = require.context(
-	// The relative path of the components folder
+	// The relative path of the base components folder
 	'./',
 	// Whether or not to look in subfolders
 	false,

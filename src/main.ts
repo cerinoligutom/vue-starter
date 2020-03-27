@@ -8,7 +8,7 @@ import '@/validation';
 import '@/apollo';
 
 // Globally register all `_base`-prefixed components
-import '@/components/_globals';
+import '@/components/_base';
 import { env } from './config/environment';
 
 Vue.config.productionTip = !env.isProduction;

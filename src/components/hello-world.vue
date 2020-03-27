@@ -88,11 +88,6 @@
 				</BaseLink>
 			</li>
 		</ul>
-		<div>
-			<pre>type: {{ typeof inputValue }}</pre>
-			<pre>value: {{ JSON.stringify(inputValue) }}</pre>
-			<BaseInput v-model="inputValue" type="number" label="This is a label">Base Button lage ni</BaseInput>
-		</div>
 	</div>
 </template>
 

@@ -1,9 +1,10 @@
 import Vue from 'vue';
-import App from './app.vue';
-import router from './router';
-import store from './store';
+import App from '@/app.vue';
+import router from '@/router';
+import store from '@/store';
 import '@/assets/css/tailwind.css';
 
+import '@/validation';
 import '@/apollo';
 
 // Globally register all `_base`-prefixed components

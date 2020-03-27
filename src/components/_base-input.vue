@@ -1,15 +1,23 @@
 <template>
-	<label>
-		{{ label }}
-		<input v-bind="$attrs" :type="type" @input="$emit('update', $event.target.value)" v-on="$listeners" />
-	</label>
+	<ValidationProvider v-slot="{ errors, required, ariaInput, ariaMsg }" tag="div" :name="name || label" :rules="rules">
+		<label>
+			<span>{{ label || name }}</span>
+			<span>{{ required ? ' *' : '' }}</span>
+		</label>
+		<input :id="name" v-bind="$attrs" :type="type" @input="$emit('update', $event.target.value)" v-on="$listeners" />
+		<span v-if="errors[0]" v-bind="ariaMsg">err{{ errors[0] }}</span>
+	</ValidationProvider>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import { ValidationProvider } from 'vee-validate';
 
 export default Vue.extend({
 	name: 'BaseInput',
+	components: {
+		ValidationProvider,
+	},
 	inheritAttrs: false,
 	// Change the v-model event name to `update` to avoid changing
 	// the behavior of the native `input` event.
@@ -18,9 +26,17 @@ export default Vue.extend({
 		event: 'update',
 	},
 	props: {
+		name: {
+			type: String,
+			default: '',
+		},
 		label: {
 			type: String,
-			default: undefined,
+			default: '',
+		},
+		rules: {
+			type: [Object, String],
+			default: '',
 		},
 		type: {
 			type: String,

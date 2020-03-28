@@ -7,8 +7,8 @@ const requireComponent = require.context(
 	// Whether or not to look in subfolders
 	false,
 	// The regular expression used to match base component filenames.
-	// Only include "_base-" prefixed .vue files
-	/_base-[\w-]+\.vue$/,
+	// Only include "Base" prefixed .vue files
+	/Base[\w-]+\.vue$/,
 );
 
 requireComponent.keys().forEach(fileName => {

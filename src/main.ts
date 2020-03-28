@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import App from '@/app.vue';
+import App from '@/App.vue';
 import router from '@/router';
 import store from '@/store';
 import '@/assets/css/tailwind.css';
@@ -7,7 +7,7 @@ import '@/assets/css/tailwind.css';
 import '@/validation';
 import '@/apollo';
 
-// Globally register all `_base`-prefixed components
+// Globally register all `Base`-prefixed components
 import '@/components/_base';
 import { env } from './config/environment';
 

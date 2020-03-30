@@ -1,3 +1,12 @@
+<template>
+	<a v-if="href" :href="href" target="_blank" v-bind="$attrs">
+		<slot />
+	</a>
+	<RouterLink v-else :to="routerLinkTo" v-bind="$attrs">
+		<slot />
+	</RouterLink>
+</template>
+
 <script>
 export default {
 	inheritAttrs: false,
@@ -74,11 +83,8 @@ export default {
 };
 </script>
 
-<template>
-	<a v-if="href" :href="href" target="_blank" v-bind="$attrs">
-		<slot />
-	</a>
-	<RouterLink v-else :to="routerLinkTo" v-bind="$attrs">
-		<slot />
-	</RouterLink>
-</template>
+<style lang="postcss" scoped>
+a {
+	color: #42b983;
+}
+</style>

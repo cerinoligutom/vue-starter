@@ -9,6 +9,10 @@ import '@/apollo';
 
 // Globally register all `Base`-prefixed components
 import '@/components/_base';
+
+// Globally register layout components
+import '@/layouts';
+
 import { env } from './config/environment';
 
 Vue.config.productionTip = !env.isProduction;

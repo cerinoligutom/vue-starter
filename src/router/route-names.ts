@@ -10,6 +10,6 @@ export enum RouteNames {
 Vue.prototype.$routeNames = RouteNames;
 declare module 'vue/types/vue' {
 	interface Vue {
-		$routeNames: RouteNames;
+		$routeNames: typeof RouteNames;
 	}
 }

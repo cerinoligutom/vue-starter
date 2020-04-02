@@ -2,31 +2,15 @@
 
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import Home from '../views/Home.vue';
 import NProgress from 'nprogress';
-import { RouteNames } from './route-names';
+
+import { routes } from './routes';
 
 NProgress.configure({
 	showSpinner: false,
 });
 
 Vue.use(VueRouter);
-
-const routes: RouteConfig[] = [
-	{
-		path: '/',
-		name: RouteNames.HOME,
-		component: Home,
-	},
-	{
-		path: '/about',
-		name: RouteNames.ABOUT,
-		// route level code-splitting
-		// this generates a separate chunk (about.[hash].js) for this route
-		// which is lazy-loaded when the route is visited.
-		component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue'),
-	},
-];
 
 const router = new VueRouter({
 	// Use the HTML5 history API (i.e. normal-looking routes)

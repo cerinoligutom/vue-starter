@@ -33,7 +33,7 @@
 	},
 	"devDependencies": {
 		"@fullhuman/postcss-purgecss": "^2.1.0",
-		"@graphql-codegen/cli": "^1.13.1",
+		"@graphql-codegen/cli": "^1.21.8",
 		"@graphql-codegen/typescript": "^1.13.1",
 		"@graphql-codegen/typescript-operations": "^1.13.1",
 		"@graphql-codegen/typescript-vue-apollo": "^1.13.1",
